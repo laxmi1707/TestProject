@@ -4,7 +4,7 @@ public class CartItem {
 
 	private Product product;
 	
-	private Integer quantity = 1; //default is 1
+	private int quantity = 1; //default is 1
 	
 	public Product getProduct() {
 		return product;
@@ -17,13 +17,13 @@ public class CartItem {
 	/**
      * @param product
      */
-    public CartItem(Product product, Integer quantity) {
+    public CartItem(Product product, int quantity) {
         super();
         this.product = product;
         this.quantity = quantity;
     }
     
-    public Float getPriceBeforeDiscount(){
+    public float getPriceBeforeDiscount(){
     	return product.getPrice() * quantity;
     }
     
@@ -40,7 +40,7 @@ public class CartItem {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((product == null) ? 0 : product.hashCode());
-		result = prime * result + ((quantity == null) ? 0 : quantity.hashCode());
+		result = prime * result + quantity;
 		return result;
 	}
 
@@ -50,18 +50,18 @@ public class CartItem {
 			return true;
 		if (obj == null)
 			return false;
+
 		CartItem other = (CartItem) obj;
 		if (product == null) {
 			if (other.product != null)
 				return false;
 		} else if (!product.equals(other.product))
 			return false;
-		if (quantity == null) {
-			if (other.quantity != null)
-				return false;
-		} else if (!quantity.equals(other.quantity))
+		if (quantity != other.quantity)
 			return false;
 		return true;
 	}
+
+	
     
 }
