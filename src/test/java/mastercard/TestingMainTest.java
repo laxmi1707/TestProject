@@ -10,7 +10,6 @@ public class TestingMainTest {
 
 	@Test
 	public void hello() {
-		TestingMain test = new TestingMain();
-			assertTrue(test.testword());
+		
 	}
 }
