@@ -14,9 +14,11 @@ public class CartItem {
 		return quantity;
 	}
 
-	/**
-     * @param product
-     */
+	public CartItem(Product product) {
+        super();
+        this.product = product;
+    }
+	
     public CartItem(Product product, int quantity) {
         super();
         this.product = product;
