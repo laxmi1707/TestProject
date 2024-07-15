@@ -33,6 +33,7 @@ public class TestingMain {
 			customerCart.addCartItems(cartItemProduct2);
 			customerCart.calculateTotalPrice();
 			System.out.println("Price Before discount:" + customerCart.getPriceBeforeDiscount());
+			System.out.println("Price Before discount:" + customerCart.getPriceBeforeDiscount());
 			
 			System.out.println("Price After discount:" + customerCart.getPriceAfterDiscount());
 	}
